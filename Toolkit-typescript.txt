@@ -24,3 +24,86 @@ const appSlice = createSlice({
 
 
 what comes in payload,(payload is like a box) whatever we want to send in state
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+___________________________________________________________________________
+
+Basic counter
+___________________________________________________________________________
+
+Store.ts
+
+import { configureStore } from "@reduxjs/toolkit";
+import appSlice from "./slices/appSlice";
+export const store = configureStore({
+  reducer: {
+    appReducer: appSlice,
+  },
+});
+export type RootState = ReturnType<typeof store.getState>;
+
+_layout.tsx
+import { Stack } from "expo-router";
+import { Provider } from "react-redux";
+import { store } from "./redux/store";
+export default function RootLayout() {
+  return (
+    <Provider store={store}>
+      <Stack>
+        <Stack.Screen name="index" />
+      </Stack>
+    </Provider>
+  );
+}
+
+
+appSlice.tsx
+import { createSlice } from "@reduxjs/toolkit";
+interface appSliceInitialStateType {
+  count: number;
+}
+const initialState: appSliceInitialStateType = {
+  count: 0,
+};
+const appSlice = createSlice({
+  name: "appSlice",
+  initialState,
+  reducers: {
+    increaseCount: (state) => {
+      state.count++;
+    },
+    decreaseCount: (state) => {
+      state.count--;
+    },
+  },
+});
+export const { increaseCount, decreaseCount } = appSlice.actions;
+export default appSlice.reducer;
+
+
+Index.tsx
+import { Button, Text, View } from "react-native";
+import { useDispatch, useSelector } from "react-redux";
+import { decreaseCount, increaseCount } from "./redux/slices/appSlice";
+import appSlice from "./redux/slices/appSlice";
+import { RootState } from "./redux/store";
+export default function Index() {
+  const dispatch = useDispatch();
+  const count = useSelector((state: RootState) => state.appReducer.count);
+  return (
+    <View
+      style={{
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <Text>count={count}</Text>
+      <Text onPress={() => dispatch(increaseCount())}>Increase</Text>
+      <Text onPress={() => dispatch(decreaseCount())}>Decrease</Text>
+    </View>
+  );
+}
+
+
+
