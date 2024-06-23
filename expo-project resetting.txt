@@ -1,0 +1,9 @@
+https://www.youtube.com/watch?v=MvmKSNdyJ9g&t=50s
+
+npm run reset-project
+(reset the project no (tabs) folder but create another app folder with index and layout file)
+if you want to have tabs for every screen in app then define them in _layout app 
+
+
+
+

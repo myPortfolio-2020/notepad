@@ -1,2 +1,26 @@
 Code Soni
 https://www.youtube.com/watch?v=FBgW19Gofnk
+
+
+
+---------------------------------------------
+react Native toolkit installations
+npm install @reduxjs/toolkit react-redux
+npm install --save-dev typescript @types/react @types/react-native
+---------------------------------------------
+
+
+
+
+const appSlice = createSlice({
+  name: "appSlice",
+  initialState,
+  reducers: {
+    increaseCount: (state, action) => {
+      state.count = action.payload
+    },
+  },
+});
+
+
+what comes in payload,(payload is like a box) whatever we want to send in state
