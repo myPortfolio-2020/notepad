@@ -1,0 +1,17 @@
+if className Property does not exist 
+create app.d.ts
+Inside it add the following code
+/// <reference types="nativewind/types" />
+
+---------------------------------------------------------------------------
+
+tailwind css intellisense
+
+install extension
+Tailwind CSS IntelliSense
+---------------------------------------------------------------------------
+check If Tailwind does not work
+
+ content: ["./app/**/*.{js,jsx,ts,tsx}", "./components/**/*.{js,jsx,ts,tsx}"],
+
+---------------------------------------------------------------------------
