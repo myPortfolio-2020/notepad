@@ -1,3 +1,6 @@
 npm i -g json-server
 
 npx json-server --watch -p 3001 db.json
+
+
+give ip address if data doesnot show rather giving localHost
