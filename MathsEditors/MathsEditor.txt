@@ -1,0 +1,8 @@
+https://www.imatheq.com/imatheq/com/imatheq/math-equation-editor.html
+
+
+
+
+
+ libraries:KaTeX 
+https://katex.org/docs/browser
