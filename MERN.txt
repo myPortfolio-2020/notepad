@@ -1,0 +1,13 @@
+
+Complete MERN Beginner Course (TypeScript, Authentication, Deployment...)
+https://www.youtube.com/watch?v=FcxjCPeicvU&list=PLrnPJCHvNZuDG6BWjUFVxeWyYlve_SVJO&index=2
+
+
+How to build & deploy a MERN stack web application (typescript, mongo, express, react, node)
+https://www.youtube.com/watch?v=G_XyAfcLeqI&t=12s
+
+
+
+
+chai our code react native
+formik
