@@ -146,13 +146,49 @@ var myObj = {
     nm: 'tata',
     position: true,
     roll: 222,
-    salary: function () { return 2000; }
+    salary: function () { return 2000; },
 };
 console.log(myObj.nm);
 delete myObj.roll;
 console.log("nm" in myObj); // true
 myObj.address = 'asdasdasdasd sscsc';
 console.log(myObj);
+var personObj = {
+    nm: 'jamal',
+    friends: 7,
+    shopping: true,
+    address: {
+        lane: 12,
+        location: "us"
+    },
+    hobbies: ['gaming', 'plantation', 'cricket']
+};
+console.log(personObj.nm);
+console.log(personObj.friends);
+console.log(personObj.address);
+console.log(personObj.address.lane);
+console.log(personObj.hobbies);
+console.log(personObj.hobbies[2]);
+// another way to access object value
+var objAcces = {
+    name: 'Sumandar Khan',
+    'full Name': 'BillalAhmedKhan', // there is a gap between full and name
+    age: 40,
+    sal: 500,
+    holidays: ['sunday', 'monday']
+};
+// console.log('Notice in object full Name is with space', objAcces.full Name)
+console.log('objAcces ways', objAcces.name);
+console.log('objAcces another ways', objAcces['age']);
+console.log('Another way of object value is as:', objAcces['full Name']);
+// destructuring
+// Array Destructuring
+var desArr = ['shabana', 'rehana', 'forKhana', 5, true];
+var one = desArr[0], two = desArr[1], three = desArr[2], four = desArr[3], five = desArr[4];
+// console.log(one,two,three,four,five)
+var desArr2 = ['shabana', 'rehana', 'forKhana', 5, true];
+var x = desArr2[2];
+console.log(x); // forKhana
 //Generic
 // const genericFun =<T> (a: T): T=>{
 //     return a

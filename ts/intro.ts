@@ -235,7 +235,8 @@ const myObj = {
     nm:'tata',
     position:true,
     roll: 222,
-    salary: ()=>2000
+    salary: ()=>2000,
+   
 }
 
 console.log(myObj.nm)
@@ -246,6 +247,54 @@ console.log("nm" in myObj) // true
 myObj.address = 'asdasdasdasd sscsc'
 
 console.log(myObj)
+
+
+
+const personObj = {
+    nm: 'jamal',
+    friends: 7,
+    shopping: true,
+    address: {
+        lane:12,
+        location:"us"
+    },
+    hobbies: ['gaming', 'plantation', 'cricket']
+}
+
+console.log(personObj.nm)
+console.log(personObj.friends)
+console.log(personObj.address)
+console.log(personObj.address.lane)
+console.log(personObj.hobbies)
+console.log(personObj.hobbies[2])
+
+// another way to access object value
+
+let objAcces = {
+    name:'Sumandar Khan',
+    'full Name': 'BillalAhmedKhan',  // there is a gap between full and name
+    age:40,
+    sal:500,
+    holidays:['sunday','monday']
+}
+
+// console.log('Notice in object full Name is with space', objAcces.full Name)
+
+console.log('objAcces ways', objAcces.name)
+console.log('objAcces another ways',objAcces['age'] )
+console.log('Another way of object value is as:', objAcces['full Name'])
+
+
+
+// destructuring
+// Array Destructuring
+const desArr = ['shabana', 'rehana','forKhana',5,true]
+const [one,two,three,four,five ] = desArr
+// console.log(one,two,three,four,five)
+
+const desArr2 = ['shabana', 'rehana','forKhana',5,true]
+const [,,x,, ] = desArr2
+console.log(x) // forKhana
 
 
 
