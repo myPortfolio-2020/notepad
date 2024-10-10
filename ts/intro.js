@@ -1,4 +1,14 @@
-// type and Literal Type
+// type and interface difference
+var obj = {
+    auth: 'asdasd',
+    age: 14
+};
+var newObjTwo = {
+    nm: 'string',
+    sub: 'string',
+    avail: true,
+    pages: 4
+};
 var inter = [123, 'asfa'];
 var network = {
     nm: 'rabab',
@@ -96,6 +106,15 @@ console.log('addOrConcat', addOrConcat(2, 5, 'add')); // 7
 var myFunVar1 = addOrConcat(2, 5, 'add');
 // closely monitor out put will be 27
 var myFunVar2 = addOrConcat(2, 5, 'concat');
+// Array
+// Array defining Method
+//Mehod 1
+var arr = [1, 2, 3];
+var arr2 = ['a', 'b', 'c'];
+var arr3 = ['a', 'b', 'c', 1, 2, 3, true];
+// Method 2 - by class contractor
+var arrFour = new Array('asim', 'asif');
+//Method 3 - 
 //Generic
 var genericFun = function (a) {
     return a;

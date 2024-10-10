@@ -1,3 +1,50 @@
+
+// type and interface difference
+
+type Author = string
+type Age = number
+
+// cant define interface like that
+// interface Interfacy = string
+
+type ISayO ={
+    auth: Author,
+    age: Age
+}
+
+let obj:ISayO = {
+    auth: 'asdasd',
+    age:14
+}
+
+// Interface with the same name can be defined multiple time 
+// But you can't do this with type
+interface InterTwo {
+    carModel : number
+}
+interface InterTwo {   
+    chadeNum: number
+}
+
+// extends in interface but not Available in type
+
+interface IA {
+    nm: string,
+    sub: string,
+    avail:boolean
+}
+interface IB extends IA{
+    pages:number
+}
+let newObjTwo:IB = {
+    nm: 'string',
+    sub: 'string',
+    avail:true,
+    pages:4
+}
+
+
+
 // type and Literal Type
 
 type Internet = (string | number)[]
@@ -136,6 +183,21 @@ let myFunVar1:string = addOrConcat(2,5,'add') as string
 // closely monitor out put will be 27
 
 let myFunVar2:number = addOrConcat(2,5,'concat') as number
+
+
+// Array
+// Array defining Method
+
+//Mehod 1
+let arr = [1,2,3]
+let arr2 = ['a','b','c']
+let arr3: (string | number | boolean)[] = ['a','b','c',1,2,3,true]
+
+// Method 2 - by class contractor
+let arrFour = new Array('asim','asif')
+
+//Method 3 - 
+
 
 
 //Generic
