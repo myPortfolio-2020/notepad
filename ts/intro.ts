@@ -192,31 +192,38 @@ let myFunVar2:number = addOrConcat(2,5,'concat') as number
 let arr = [1,2,3]
 let arr2 = ['a','b','c']
 let arr3: (string | number | boolean)[] = ['a','b','c',1,2,3,true]
+console.log(arr3)
 
 // Method 2 - by class contractor
 let arrFour = new Array('asim','asif')
-
+console.log(arrFour)
 //Method 3 - 
+let arrFive = Array.of('asim','asif')
+console.log(arrFive)
 
+// nested Array
 
+let arrSix: (string | string[])[] = ['susan', 'asif', ['shakila','kasif']]
+console.log(arrSix[0])
+console.log(arrSix[1])
+console.log(arrSix[2][0])
+console.log(arrSix[2][1])
 
 //Generic
-const genericFun =<T> (a: T): T=>{
-    return a
-}
-console.log(genericFun('hey'))
-console.log(genericFun(5))
-console.log(genericFun(true))
+// const genericFun =<T> (a: T): T=>{
+//     return a
+// }
+// console.log(genericFun('hey'))
+// console.log(genericFun(5))
+// console.log(genericFun(true))
 
+// const person = {
+//     nm: 'jhkj',
+//     age:60
+// }
+// const findObj =(obj, nm)=> obj[nm]
 
-const person = {
-    nm: 'jhkj',
-    age:60
-}
-
-const findObj =(obj, nm)=> obj[nm]
-
-console.log('hvjh', findObj( person, "nm"))
+// console.log('hvjh', findObj( person, "nm"))
 
 
 

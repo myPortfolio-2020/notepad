@@ -112,20 +112,30 @@ var myFunVar2 = addOrConcat(2, 5, 'concat');
 var arr = [1, 2, 3];
 var arr2 = ['a', 'b', 'c'];
 var arr3 = ['a', 'b', 'c', 1, 2, 3, true];
+console.log(arr3);
 // Method 2 - by class contractor
 var arrFour = new Array('asim', 'asif');
+console.log(arrFour);
 //Method 3 - 
+var arrFive = Array.of('asim', 'asif');
+console.log(arrFive);
+// nested Array
+var arrSix = ['susan', 'asif', ['shakila', 'kasif']];
+console.log(arrSix[0]);
+console.log(arrSix[1]);
+console.log(arrSix[2][0]);
+console.log(arrSix[2][1]);
 //Generic
-var genericFun = function (a) {
-    return a;
-};
-console.log(genericFun('hey'));
-console.log(genericFun(5));
-console.log(genericFun(true));
-var person = {
-    nm: 'jhkj',
-    age: 60
-};
-var findObj = function (obj, nm) { return obj[nm]; };
-console.log('hvjh', findObj(person, "nm"));
+// const genericFun =<T> (a: T): T=>{
+//     return a
+// }
+// console.log(genericFun('hey'))
+// console.log(genericFun(5))
+// console.log(genericFun(true))
+// const person = {
+//     nm: 'jhkj',
+//     age:60
+// }
+// const findObj =(obj, nm)=> obj[nm]
+// console.log('hvjh', findObj( person, "nm"))
 // ---------------------------------------------
