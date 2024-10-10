@@ -1,9 +1,0 @@
-let echo = <T>(arg: T): boolean=>{
-    return (typeof arg === 'object')
-}
-
-console.log(echo({a:'dasd', b:1422}))  // true
-console.log(echo(['a', 'b']))  // true
-console.log(echo('jahsgdkjak'))  // false
-console.log(echo(1232))  // false
--------------------------------------------------------------------
