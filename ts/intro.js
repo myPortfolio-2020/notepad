@@ -117,14 +117,42 @@ console.log(arr3);
 var arrFour = new Array('asim', 'asif');
 console.log(arrFour);
 //Method 3 - 
-var arrFive = Array.of('asim', 'asif');
-console.log(arrFive);
+// let arrFive = Array.of('asim','asif')
+// console.log(arrFive)
 // nested Array
 var arrSix = ['susan', 'asif', ['shakila', 'kasif']];
 console.log(arrSix[0]);
 console.log(arrSix[1]);
 console.log(arrSix[2][0]);
 console.log(arrSix[2][1]);
+var addFun = ['a', 'b', 'c', 'd'];
+var arrSixFun = addFun.push('rabab');
+console.log(addFun, arrSixFun);
+//  ['a', 'b', 'c', 'd', 'rabab'] 5
+//  arrSixFun 5
+var arrSixFun2 = addFun.pop();
+console.log(addFun, arrSixFun2);
+// pop - remove the last one from array
+// now the value of arrSixFun2 will be last element
+// ['a', 'b', 'c', 'd'] 'rabab'
+var arrSixFun3 = addFun.shift();
+console.log(addFun, arrSixFun3);
+// ['b', 'c', 'd'] 'a'
+var arrSixFun4 = addFun.unshift();
+console.log(addFun, arrSixFun4);
+// ['b', 'c', 'd'] 3
+// objects
+var myObj = {
+    nm: 'tata',
+    position: true,
+    roll: 222,
+    salary: function () { return 2000; }
+};
+console.log(myObj.nm);
+delete myObj.roll;
+console.log("nm" in myObj); // true
+myObj.address = 'asdasdasdasd sscsc';
+console.log(myObj);
 //Generic
 // const genericFun =<T> (a: T): T=>{
 //     return a
