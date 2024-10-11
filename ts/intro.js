@@ -1,3 +1,35 @@
+// refernce tutorial https://www.youtube.com/watch?v=N2C5FXPyugQ&list=PLplW4d4HPsEJL29589GDjtHPAi-R01tnJ&index=39
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __rest = (this && this.__rest) || function (s, e) {
+    var t = {};
+    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+        t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === "function")
+        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
+            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
+                t[p[i]] = s[p[i]];
+        }
+    return t;
+};
+var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
+    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
+        if (ar || !(i in from)) {
+            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
+            ar[i] = from[i];
+        }
+    }
+    return to.concat(ar || Array.prototype.slice.call(from));
+};
 // // type and interface difference
 // type Author = string
 // type Age = number
@@ -216,14 +248,28 @@
 // const [,,x,, ] = desArr2
 // console.log(x) // forKhana
 // callback Function
-var callBackFun = function (helloFun) {
-    return helloFun('Rabab');
+// let callBackFun = (helloFun:any, anotherVal:string)=>{
+var callBackFun = function (helloFun, anotherVal) {
+    // return helloFun('Rabab')
+    return helloFun(anotherVal);
 };
 var friends = function (myNm) {
     console.log("hi ".concat(myNm));
 };
-callBackFun(friends); // notice you are giving here as friends not friends() 
+callBackFun(friends, 'anotherVal parametar argument'); // notice you are giving here as friends not friends() 
 //because you have given the argument  in callBackFun
+//Another Example
+var processingData = function () {
+    console.log('processing Data');
+};
+var deleteData = function () {
+    console.log('delete Data...');
+};
+var newCallBackFun = function (callBack) {
+    return callBack();
+};
+newCallBackFun(processingData);
+newCallBackFun(deleteData);
 //Generic
 // const genericFun =<T> (a: T): T=>{
 //     return a
@@ -238,3 +284,55 @@ callBackFun(friends); // notice you are giving here as friends not friends()
 // const findObj =(obj, nm)=> obj[nm]
 // console.log('hvjh', findObj( person, "nm"))
 // ---------------------------------------------
+//Rest and Spread Operators
+//Spread Operators
+var opr = ['hina', 'mina', 'bina'];
+var opr2 = ['jamal', 'kamal', 'nihaal'];
+opr.push('tahira');
+var oprAdded = __spreadArray(__spreadArray([], opr, true), opr2, true);
+console.log(oprAdded);
+var studGenInfo = {
+    course: 'IT',
+    shift: 'evening',
+    tution: 3500
+};
+var stud1 = {
+    nm: 'jamal',
+    age: 15,
+    pass: true
+};
+var stud2 = {
+    nm: 'Kamal',
+    age: 16,
+    pass: false
+};
+var allRecordStud1 = __assign(__assign({}, studGenInfo), stud1);
+var allRecordStud2 = __assign(__assign({}, studGenInfo), stud2);
+console.log(allRecordStud1);
+console.log(allRecordStud2);
+//Rest Operators
+var addFun = function (a, b) {
+    var y = [];
+    for (var _i = 2; _i < arguments.length; _i++) {
+        y[_i - 2] = arguments[_i];
+    }
+    return a + b + y[0];
+};
+console.log(addFun(5, 5, 7, 7));
+// ex 2
+var stud3 = {
+    nm: 'AllahDitta',
+    age: 15,
+    pass: true,
+    reg: 1234,
+    carPooling: true,
+    assignments: 10
+};
+var rest = __rest(stud3, []);
+console.log(rest);
+//Explore keyof keyword
+var personObj = {
+    name: 'Ratal Lal',
+    age: 40
+};
+var ;

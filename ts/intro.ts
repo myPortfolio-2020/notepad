@@ -1,4 +1,6 @@
 
+// refernce tutorial https://www.youtube.com/watch?v=N2C5FXPyugQ&list=PLplW4d4HPsEJL29589GDjtHPAi-R01tnJ&index=39
+
 // // type and interface difference
 
 // type Author = string
@@ -298,16 +300,36 @@
 
 // callback Function
 
-let callBackFun = (helloFun:any)=>{
-    return helloFun('Rabab')
+// let callBackFun = (helloFun:any, anotherVal:string)=>{
+
+let callBackFun = (helloFun:(myNm:string)=> void, anotherVal:string)=>{
+    // return helloFun('Rabab')
+    return helloFun(anotherVal)
 }
 
-let friends = (myNm:string)=>{
+let friends = (myNm:string):void=>{
     console.log(`hi ${myNm}`)
 }
 
-callBackFun(friends) // notice you are giving here as friends not friends() 
+callBackFun(friends, 'anotherVal parametar argument') // notice you are giving here as friends not friends() 
 //because you have given the argument  in callBackFun
+
+//Another Example
+
+const processingData = ()=>{
+    console.log('processing Data')
+}
+
+const deleteData = ()=>{
+    console.log('delete Data...')
+}
+
+const newCallBackFun = (callBack)=>{
+    return callBack()
+}
+
+newCallBackFun(processingData)
+newCallBackFun(deleteData)
 
 //Generic
 // const genericFun =<T> (a: T): T=>{
@@ -325,8 +347,74 @@ callBackFun(friends) // notice you are giving here as friends not friends()
 
 // console.log('hvjh', findObj( person, "nm"))
 
-
-
 // ---------------------------------------------
 
+//Rest and Spread Operators
 
+//Spread Operators
+let opr = ['hina','mina','bina']
+
+let opr2 = ['jamal','kamal','nihaal']
+
+opr.push('tahira')
+
+let oprAdded = [...opr, ...opr2]
+console.log(oprAdded)
+
+
+let studGenInfo = {
+    course: 'IT',
+    shift:'evening',
+    tution:3500
+}
+
+let stud1 = {
+    nm:'jamal',
+    age:15,
+    pass:true
+}
+
+let stud2 = {
+    nm:'Kamal',
+    age:16,
+    pass:false
+}
+
+let allRecordStud1 = {...studGenInfo, ...stud1}
+let allRecordStud2 = {...studGenInfo, ...stud2}
+
+console.log(allRecordStud1)
+console.log(allRecordStud2)
+
+//Rest Operators
+const addFun = (a:number, b:number, ...y:number[])=>{
+    return a+b+y[0]
+}
+console.log(addFun(5,5,7,7))
+
+// ex 2
+
+ let stud3 = {
+    nm:'AllahDitta',
+    age:15,
+    pass:true,
+    reg:1234,
+    carPooling: true,
+    assignments:10
+}
+
+const {...rest} = stud3
+console.log(rest)
+
+//Explore keyof keyword
+let personObj = {
+    name: 'Ratal Lal',
+    age: 40
+}
+
+type PersonObj = {
+    name:string,
+    age:number
+}
+
+const 
