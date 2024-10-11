@@ -333,6 +333,17 @@ console.log(rest);
 //Explore keyof keyword
 var personObj = {
     name: 'Ratal Lal',
-    age: 40
+    age: 40,
+    email: 'ex@ex.com'
 };
-var ;
+// const personFun = (anyObj:PersonObj, anyObjElement: 'name' | 'age')=>{
+//     return anyObj[anyObjElement] // <= not restricting to anyanyObj.name or anyanyObj.age
+// }
+var personFun = function (anyObj, anyObjElement) {
+    return anyObj[anyObjElement]; // <= not restricting to anyanyObj.name or anyanyObj.age
+};
+console.log(personFun(personObj, 'name'));
+console.log(personFun(personObj, 'age'));
+// now if you extend your object with another element as email
+// you need to add this email in type as well as anyObjElement: 'name' | 'age' | 'email'
+// so we have to make it dynamic

@@ -409,12 +409,34 @@ console.log(rest)
 //Explore keyof keyword
 let personObj = {
     name: 'Ratal Lal',
-    age: 40
+    age: 40,
+    email: 'ex@ex.com'
 }
 
-type PersonObj = {
-    name:string,
-    age:number
+// type PersonObj = {
+//     name:string,
+//     age:number
+// }
+
+// instead of the above way we can define type as
+
+type PersonObj = typeof personObj
+type key = keyof typeof personObj
+
+// const personFun = (anyObj:PersonObj, anyObjElement: 'name' | 'age')=>{
+//     return anyObj[anyObjElement] // <= not restricting to anyanyObj.name or anyanyObj.age
+    
+// }
+
+const personFun = (anyObj:PersonObj, anyObjElement: 'name' | 'age')=>{
+    return anyObj[anyObjElement] // <= not restricting to anyanyObj.name or anyanyObj.age
+    
 }
 
-const 
+console.log(personFun(personObj,'name')) 
+console.log(personFun(personObj,'age')) 
+
+// now if you extend your object with another element as email
+// you need to add this email in type as well as anyObjElement: 'name' | 'age' | 'email'
+
+// so we have to make it dynamic
