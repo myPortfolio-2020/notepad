@@ -331,6 +331,7 @@ var stud3 = {
 var rest = __rest(stud3, []);
 console.log(rest);
 //Explore keyof keyword
+// why do we use it to make the object, type and function dynamic
 var personObj = {
     name: 'Ratal Lal',
     age: 40,
