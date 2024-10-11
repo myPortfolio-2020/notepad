@@ -1,302 +1,313 @@
 
-// type and interface difference
+// // type and interface difference
 
-type Author = string
-type Age = number
+// type Author = string
+// type Age = number
 
-// cant define interface like that
-// interface Interfacy = string
+// // cant define interface like that
+// // interface Interfacy = string
 
-type ISayO ={
-    auth: Author,
-    age: Age
-}
+// type ISayO ={
+//     auth: Author,
+//     age: Age
+// }
 
-let obj:ISayO = {
-    auth: 'asdasd',
-    age:14
-}
+// let obj:ISayO = {
+//     auth: 'asdasd',
+//     age:14
+// }
 
-// Interface with the same name can be defined multiple time 
-// But you can't do this with type
-interface InterTwo {
-    carModel : number
-}
-interface InterTwo {   
-    chadeNum: number
-}
+// // Interface with the same name can be defined multiple time 
+// // But you can't do this with type
+// interface InterTwo {
+//     carModel : number
+// }
+// interface InterTwo {   
+//     chadeNum: number
+// }
 
-// extends in interface but not Available in type
+// // extends in interface but not Available in type
 
-interface IA {
-    nm: string,
-    sub: string,
-    avail:boolean
-}
-interface IB extends IA{
-    pages:number
-}
-let newObjTwo:IB = {
-    nm: 'string',
-    sub: 'string',
-    avail:true,
-    pages:4
-}
-
-
-
-// type and Literal Type
-
-type Internet = (string | number)[]
-const inter:Internet = [123, 'asfa']
-
-type Network = {
-    nm:string,
-    available: boolean,
-    internetCon: Internet
-}
-
-const network: Network = {
-    nm:'rabab',
-    available: true,
-    internetCon: [12,'45455']
-}
-
-type anyLiteral = 'Ammy' | 'John' | 'susan'
-
-const anyLiteral: anyLiteral = 'Ammy'
+// interface IA {
+//     nm: string,
+//     sub: string,
+//     avail:boolean
+// }
+// interface IB extends IA{
+//     pages:number
+// }
+// let newObjTwo:IB = {
+//     nm: 'string',
+//     sub: 'string',
+//     avail:true,
+//     pages:4
+// }
 
 
 
-//functions
-const myFunc = (a: number,b: number): number=>{
-    return a * b
-}
-console.log(myFunc(5,3))
+// // type and Literal Type
 
-const myFuncTwo = (a: string, b:string): void=>{
-    console.log(a, b)
-}
-myFuncTwo('asd', 'adsad')
+// type Internet = (string | number)[]
+// const inter:Internet = [123, 'asfa']
 
-const myFuncThree = (a: number, b: number, c:string | number): number | string=>{
-    return `a * b = ${a*b}, no need of this ${c}`
-}
+// type Network = {
+//     nm:string,
+//     available: boolean,
+//     internetCon: Internet
+// }
 
-console.log(myFuncThree(10,4,'table'))
+// const network: Network = {
+//     nm:'rabab',
+//     available: true,
+//     internetCon: [12,'45455']
+// }
 
-const sum = (a: number, b:number): number=>{
-    return a+b
-}
+// type anyLiteral = 'Ammy' | 'John' | 'susan'
 
-const logMes = (message: any): void =>{
-    console.log(message)
-}
-
-logMes('kjk')
-logMes(sum(10,2))
-
-
-// type function
-type mathFunc = (a: number, b: number)=> number
-
-// interface function
-
-interface mathFunction {
-    (a: number, b: number): number
-}
-
-const multiply: mathFunc = (a,b)=>{
-    return a*b
-}
-
-const divide: mathFunction = (a,b)=>{
-    return a/b
-}
-
-console.log(multiply(4,5))
-console.log(divide(800,10))
-
-// if c is optional then type of c will be undefined
-// if default value a:number = 10 then => console.log(newMathFunc(undefined, 4))
-// if a :number =50, b: number=10, c?: number => newMathFunc(undefined)
-const newMathFunc = (a :number =50, b: number=10, c?: number): number =>{
-    if(typeof c !== 'undefined'){
-        return a+b+c
-    } 
-    return a+b  
-}
-console.log(newMathFunc(undefined))
-
-
-//Rest Parameters
-const total = (...num: number[]): number=>{
-    return num.reduce((prev, cur)=> prev + cur)
-}
-console.log(total(2,2,2,2))
-
-
-const totalTwo = (a: number = 1000, ...num: number[]): number=>{
-    return a + num.reduce((prev, cur)=> prev + cur)
-}
-console.log(totalTwo(200,2,2,2,2,4))
-
-// 
-const intership = (a: number = 600, ...b:number[]): number=>{
-    return a + b.reduce((prev, cur)=>prev + cur)
-}
-
-console.log('reduce', intership(undefined, 100))
-
-// Type Assertion or Type casting
-
-type One = string
-type Two = number | string
-type Three = 'hello'
-
-let a:One = 'hey'
+// const anyLiteral: anyLiteral = 'Ammy'
 
 
 
+// //functions
+// const myFunc = (a: number,b: number): number=>{
+//     return a * b
+// }
+// console.log(myFunc(5,3))
 
-let alp: any = 12;
-(alp as number).toString
+// const myFuncTwo = (a: string, b:string): void=>{
+//     console.log(a, b)
+// }
+// myFuncTwo('asd', 'adsad')
 
-// alp! - gives a gurantee that it will not be used as null or undefined
-// so after . you will get all methods related to strin
-let alp2: null | undefined | string
-alp2 = 'alpha2'
-alp2!.toUpperCase
+// const myFuncThree = (a: number, b: number, c:string | number): number | string=>{
+//     return `a * b = ${a*b}, no need of this ${c}`
+// }
 
-// ---------------------------------------------
-// why do we need assertion
-const addOrConcat = (a: number, b: number, c: 'add' | 'concat'): number | string=>{
-    if( c === 'add') return a + b       
-        return '' + a + b
-}
+// console.log(myFuncThree(10,4,'table'))
 
-console.log('addOrConcat', addOrConcat(2,5,'concat'))  // 25
-console.log('addOrConcat', addOrConcat(2,5,'add'))  // 7
-// but in case you are trying to put the output of this function in a variable
+// const sum = (a: number, b:number): number=>{
+//     return a+b
+// }
 
-let myFunVar1:string = addOrConcat(2,5,'add') as string
-// closely monitor out put will be 27
+// const logMes = (message: any): void =>{
+//     console.log(message)
+// }
 
-let myFunVar2:number = addOrConcat(2,5,'concat') as number
+// logMes('kjk')
+// logMes(sum(10,2))
 
 
-// Array
-// Array defining Method
+// // type function
+// type mathFunc = (a: number, b: number)=> number
 
-//Mehod 1
-let arr = [1,2,3]
-let arr2 = ['a','b','c']
-let arr3: (string | number | boolean)[] = ['a','b','c',1,2,3,true]
-console.log(arr3)
+// // interface function
 
-// Method 2 - by class contractor
-let arrFour = new Array('asim','asif')
-console.log(arrFour)
-//Method 3 - 
-// let arrFive = Array.of('asim','asif')
-// console.log(arrFive)
+// interface mathFunction {
+//     (a: number, b: number): number
+// }
 
-// nested Array
+// const multiply: mathFunc = (a,b)=>{
+//     return a*b
+// }
 
-let arrSix: (string | string[])[] = ['susan', 'asif', ['shakila','kasif']]
-console.log(arrSix[0])
-console.log(arrSix[1])
-console.log(arrSix[2][0])
-console.log(arrSix[2][1])
+// const divide: mathFunction = (a,b)=>{
+//     return a/b
+// }
 
-const addFun = ['a','b','c','d']
+// console.log(multiply(4,5))
+// console.log(divide(800,10))
 
-const arrSixFun = addFun.push('rabab')
-console.log(addFun, arrSixFun)
-//  ['a', 'b', 'c', 'd', 'rabab'] 5
-//  arrSixFun 5
+// // if c is optional then type of c will be undefined
+// // if default value a:number = 10 then => console.log(newMathFunc(undefined, 4))
+// // if a :number =50, b: number=10, c?: number => newMathFunc(undefined)
+// const newMathFunc = (a :number =50, b: number=10, c?: number): number =>{
+//     if(typeof c !== 'undefined'){
+//         return a+b+c
+//     } 
+//     return a+b  
+// }
+// console.log(newMathFunc(undefined))
 
-const arrSixFun2 = addFun.pop()
-console.log(addFun, arrSixFun2)
-// pop - remove the last one from array
-// now the value of arrSixFun2 will be last element
-// ['a', 'b', 'c', 'd'] 'rabab'
 
-const arrSixFun3 = addFun.shift()
-console.log(addFun, arrSixFun3)
-// ['b', 'c', 'd'] 'a'
+// //Rest Parameters
+// const total = (...num: number[]): number=>{
+//     return num.reduce((prev, cur)=> prev + cur)
+// }
+// console.log(total(2,2,2,2))
 
-const arrSixFun4 = addFun.unshift()
-console.log(addFun, arrSixFun4)
-// ['b', 'c', 'd'] 3
 
-// objects
-const myObj = {
-    nm:'tata',
-    position:true,
-    roll: 222,
-    salary: ()=>2000,
+// const totalTwo = (a: number = 1000, ...num: number[]): number=>{
+//     return a + num.reduce((prev, cur)=> prev + cur)
+// }
+// console.log(totalTwo(200,2,2,2,2,4))
+
+// // 
+// const intership = (a: number = 600, ...b:number[]): number=>{
+//     return a + b.reduce((prev, cur)=>prev + cur)
+// }
+
+// console.log('reduce', intership(undefined, 100))
+
+// // Type Assertion or Type casting
+
+// type One = string
+// type Two = number | string
+// type Three = 'hello'
+
+// let a:One = 'hey'
+
+
+
+
+// let alp: any = 12;
+// (alp as number).toString
+
+// // alp! - gives a gurantee that it will not be used as null or undefined
+// // so after . you will get all methods related to strin
+// let alp2: null | undefined | string
+// alp2 = 'alpha2'
+// alp2!.toUpperCase
+
+// // ---------------------------------------------
+// // why do we need assertion
+// const addOrConcat = (a: number, b: number, c: 'add' | 'concat'): number | string=>{
+//     if( c === 'add') return a + b       
+//         return '' + a + b
+// }
+
+// console.log('addOrConcat', addOrConcat(2,5,'concat'))  // 25
+// console.log('addOrConcat', addOrConcat(2,5,'add'))  // 7
+// // but in case you are trying to put the output of this function in a variable
+
+// let myFunVar1:string = addOrConcat(2,5,'add') as string
+// // closely monitor out put will be 27
+
+// let myFunVar2:number = addOrConcat(2,5,'concat') as number
+
+
+// // Array
+// // Array defining Method
+
+// //Mehod 1
+// let arr = [1,2,3]
+// let arr2 = ['a','b','c']
+// let arr3: (string | number | boolean)[] = ['a','b','c',1,2,3,true]
+// console.log(arr3)
+
+// // Method 2 - by class contractor
+// let arrFour = new Array('asim','asif')
+// console.log(arrFour)
+// //Method 3 - 
+// // let arrFive = Array.of('asim','asif')
+// // console.log(arrFive)
+
+// // nested Array
+
+// let arrSix: (string | string[])[] = ['susan', 'asif', ['shakila','kasif']]
+// console.log(arrSix[0])
+// console.log(arrSix[1])
+// console.log(arrSix[2][0])
+// console.log(arrSix[2][1])
+
+// const addFun = ['a','b','c','d']
+
+// const arrSixFun = addFun.push('rabab')
+// console.log(addFun, arrSixFun)
+// //  ['a', 'b', 'c', 'd', 'rabab'] 5
+// //  arrSixFun 5
+
+// const arrSixFun2 = addFun.pop()
+// console.log(addFun, arrSixFun2)
+// // pop - remove the last one from array
+// // now the value of arrSixFun2 will be last element
+// // ['a', 'b', 'c', 'd'] 'rabab'
+
+// const arrSixFun3 = addFun.shift()
+// console.log(addFun, arrSixFun3)
+// // ['b', 'c', 'd'] 'a'
+
+// const arrSixFun4 = addFun.unshift()
+// console.log(addFun, arrSixFun4)
+// // ['b', 'c', 'd'] 3
+
+// // objects
+// const myObj = {
+//     nm:'tata',
+//     position:true,
+//     roll: 222,
+//     salary: ()=>2000,
    
+// }
+
+// console.log(myObj.nm)
+// delete myObj.roll 
+
+// console.log("nm" in myObj) // true
+
+// myObj.address = 'asdasdasdasd sscsc'
+
+// console.log(myObj)
+
+
+
+// const personObj = {
+//     nm: 'jamal',
+//     friends: 7,
+//     shopping: true,
+//     address: {
+//         lane:12,
+//         location:"us"
+//     },
+//     hobbies: ['gaming', 'plantation', 'cricket']
+// }
+
+// console.log(personObj.nm)
+// console.log(personObj.friends)
+// console.log(personObj.address)
+// console.log(personObj.address.lane)
+// console.log(personObj.hobbies)
+// console.log(personObj.hobbies[2])
+
+// // another way to access object value
+
+// let objAcces = {
+//     name:'Sumandar Khan',
+//     'full Name': 'BillalAhmedKhan',  // there is a gap between full and name
+//     age:40,
+//     sal:500,
+//     holidays:['sunday','monday']
+// }
+
+// // console.log('Notice in object full Name is with space', objAcces.full Name)
+
+// console.log('objAcces ways', objAcces.name)
+// console.log('objAcces another ways',objAcces['age'] )
+// console.log('Another way of object value is as:', objAcces['full Name'])
+
+
+
+// // destructuring
+// // Array Destructuring
+// const desArr = ['shabana', 'rehana','forKhana',5,true]
+// const [one,two,three,four,five ] = desArr
+// // console.log(one,two,three,four,five)
+
+// const desArr2 = ['shabana', 'rehana','forKhana',5,true]
+// const [,,x,, ] = desArr2
+// console.log(x) // forKhana
+
+// callback Function
+
+let callBackFun = (helloFun:any)=>{
+    return helloFun('Rabab')
 }
 
-console.log(myObj.nm)
-delete myObj.roll 
-
-console.log("nm" in myObj) // true
-
-myObj.address = 'asdasdasdasd sscsc'
-
-console.log(myObj)
-
-
-
-const personObj = {
-    nm: 'jamal',
-    friends: 7,
-    shopping: true,
-    address: {
-        lane:12,
-        location:"us"
-    },
-    hobbies: ['gaming', 'plantation', 'cricket']
+let friends = (myNm:string)=>{
+    console.log(`hi ${myNm}`)
 }
 
-console.log(personObj.nm)
-console.log(personObj.friends)
-console.log(personObj.address)
-console.log(personObj.address.lane)
-console.log(personObj.hobbies)
-console.log(personObj.hobbies[2])
-
-// another way to access object value
-
-let objAcces = {
-    name:'Sumandar Khan',
-    'full Name': 'BillalAhmedKhan',  // there is a gap between full and name
-    age:40,
-    sal:500,
-    holidays:['sunday','monday']
-}
-
-// console.log('Notice in object full Name is with space', objAcces.full Name)
-
-console.log('objAcces ways', objAcces.name)
-console.log('objAcces another ways',objAcces['age'] )
-console.log('Another way of object value is as:', objAcces['full Name'])
-
-
-
-// destructuring
-// Array Destructuring
-const desArr = ['shabana', 'rehana','forKhana',5,true]
-const [one,two,three,four,five ] = desArr
-// console.log(one,two,three,four,five)
-
-const desArr2 = ['shabana', 'rehana','forKhana',5,true]
-const [,,x,, ] = desArr2
-console.log(x) // forKhana
-
-
+callBackFun(friends) // notice you are giving here as friends not friends() 
+//because you have given the argument  in callBackFun
 
 //Generic
 // const genericFun =<T> (a: T): T=>{
