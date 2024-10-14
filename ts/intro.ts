@@ -3,6 +3,8 @@
 // --------------------------------------------
 // Understand partial utility type of typescript 
 // --------------------------------------------
+{
+
 
 const user = {
     nm: 'Raheel',
@@ -17,9 +19,10 @@ type User = {
 }
 
 const partialObject = (user:User)=>{
-    return `${user.age} - ${user.nm} - ${user.sal}`
+    return user
 }
 
-console.log(partialObject(user))
+console.log('user:', partialObject({age:14, nm:'raba', sal:78985521}))
 
-export{}
+
+}
