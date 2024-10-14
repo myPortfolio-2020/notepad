@@ -405,8 +405,9 @@ console.log(addFun(5,5,7,7))
 
 const {...rest} = stud3
 console.log(rest)
-
+// -----------------------------------------------------------
 //Explore keyof keyword
+// -----------------------------------------------------------
 // why do we use it to make the object, type and function dynamic
 let personObj = {
     name: 'Ratal Lal',
@@ -459,3 +460,9 @@ console.log(getObject(animalObject, 'skin'))
 // you need to add this email in type as well as anyObjElement: 'name' | 'age' | 'email'
 
 // so we have to make it dynamic
+
+// -----------------------------------------------------
+// Magic of as const in typescript 
+// -----------------------------------------------------
+
+
