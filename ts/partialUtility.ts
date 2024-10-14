@@ -1,5 +1,3 @@
-// refernce tutorial https://www.youtube.com/watch?v=N2C5FXPyugQ&list=PLplW4d4HPsEJL29589GDjtHPAi-R01tnJ&index=39
-
 // --------------------------------------------
 // Understand partial utility type of typescript 
 // --------------------------------------------
@@ -21,5 +19,3 @@ const partialObject = (user:User)=>{
 }
 
 console.log(partialObject(user))
-
-export{}

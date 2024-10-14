@@ -11,3 +11,24 @@ console.log(person2.toLowerCase(), person2.toUpperCase(), person2)
 
 let albert:string = 'Alber Eiestine'
 console.log(`albert once said, "what he said"`)
+
+const user = {
+    nm: 'Raheel',
+    age:40,
+    sal:5000
+}
+
+type User = {
+    nm:string,
+    age:number,
+    sal:number
+}
+
+const partialObject = (user:User)=>{
+    return user
+}
+
+partialObject(user)
+
+
+export{}
