@@ -1,0 +1,85 @@
+https://www.youtube.com/watch?v=Q5llevzCEIM&t=10s
+
+https://www.youtube.com/watch?v=FcxjCPeicvU&t=130s
+
+
+https://www.youtube.com/watch?v=ardeKHEN1j4
+
+Project
+Build & Launch an Enterprise-Level Food Ordering Platform: React Node.js MongoDB Auth Stripe & More!
+https://www.youtube.com/watch?v=ardeKHEN1j4
+
+00:00:00 intro
+00:01:33 demo
+00:05:45 backend setup
+00:17:43 frontend setup
+00:30:11 database setup
+00:38:24 react router setup
+00:44:25 layout and header
+00:57:21 mobile nav 
+01:05:17 desktop nav 
+01:07:41 responsive landing page
+01:28:00 auth0 overview
+01:30:09 auth0 setup 
+01:45:35 Authenticated user links
+02:08:51 Create User profile overview
+02:10:08 User Model
+02:13:30 Create user API
+02:27:42 Create user request
+02:42:10 Auth0 Access Token
+02:59:44 Validate Access Token
+03:15:40 Update user profile api 
+03:44:12 User profile form 
+04:15:37 Update user profile request
+04:24:55 Toast notifications
+04:30:32 Get user API
+04:43:49 Pre-populate user profile form 
+04:52:09 Protect user profile router
+04:57:15 First deployment - overview
+05:07:51 Backend github repo 
+05:15:31 Backend deploy to render 
+05:24:06 Frontend github/deployment
+05:33:14 Manage restaurant overview
+05:35:40 Cloudinary setup 
+05:44:12 Create restaurant API 
+06:17:01 create restaurant form 
+07:22:10 Create restaurant API request 
+07:47:20 Get my restaurant API 
+07:51:52 Pre-populate restaurant form 
+08:13:18 Update my restaurant API 
+08:22:24 Update my restaurant Request 
+08:35:42 Manage restaurant deploy
+08:43:44 Search feature overview
+08:46:56 search api 
+09:12:40 searchbar component
+09:34:39 search API request 
+09:44:17 search page layout 
+10:06:38 Restaurant Test Data 
+10:11:44 Search filter 
+10:27:58 Pagination 
+10:42:17 Cuisines filter 
+11:08:21 Sort options filter
+11:21:27 Search feature deploy 
+11:26:50 Detail page and menu items
+11:53:48 add to cart 
+12:16:06 remove from cart 
+12:20:12 checkout button 
+12:34:58 confirm delivery details
+12:46:51 Update user profile form 
+12:49:29 Payments flow overview 
+12:54:08 Stripe setup 
+12:58:25 Create session API 
+13:26:42 Redirect to stripe 
+13:42:35 Create order
+13:54:31 Stripe CLI setup 
+14:02:29 Start stripe CLI with nodemon 
+14:07:37 Update order in stripe webhook
+14:20:09 Checkout flow deploy 
+14:32:47 Get customer orders API 
+14:36:56 Get customer orders Request 
+14:43:59 Order status page 
+14:57:45 Order status config 
+15:18:02 Restaurant Orders page 
+15:35:07 Update order API 
+15:44:26 Order Item card update status 
+15:50:45 Order status polling

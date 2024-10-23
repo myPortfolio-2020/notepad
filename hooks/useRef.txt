@@ -1,0 +1,21 @@
+with the help of useRef we can directly manipulate our dom
+
+
+import React, { useRef } from 'react';
+
+export function App(props) {
+  const refElement = useRef();
+  const handleBg = () => {
+    refElement.current.style.backgroundColor = '#ff0000';
+  };
+
+  return (
+    <div className='App'>
+      <div ref={refElement}>ref div color</div>
+      <button onClick={handleBg}>color change</button>
+    </div>
+  );
+}
+
+// Log to console
+console.log('Hello console');
