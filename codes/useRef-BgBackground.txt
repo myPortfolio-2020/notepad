@@ -1,0 +1,48 @@
+import React, { useRef } from 'react';
+
+const BgBtnUseRef = () => {
+  const color = ["red", "green", "blue"];
+  const divRef = useRef<HTMLDivElement>(null);  // useRef to reference the div element
+
+  const handleClick = (colorName: string) => {
+    if (divRef.current) {
+      divRef.current.style.backgroundColor = colorName;  // Change background color directly
+    }
+  };
+
+  return (
+    <div>
+           {/* Div with dynamic background color */}
+      <div
+        ref={divRef}  // Attach ref to the div element
+        style={{
+          marginTop: 20,
+          width: "100%",
+          height: "200px",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          color: "white",
+        }}
+      >
+        Click a button to change background color
+      </div>
+      {/* Dynamic buttons */}
+      {color.map((colorName, index) => (
+        <button
+          key={index}
+          onClick={() => handleClick(colorName)}  // Set the background color using useRef
+          style={{ margin: 5, padding: 10 }}
+        >
+          {colorName}
+        </button>
+      ))}
+
+   
+    </div>
+  );
+};
+
+export default BgBtnUseRef;
+
+
