@@ -4,3 +4,35 @@ best one IT MATE PK
 https://www.youtube.com/@itmatepakistan
 
 https://www.youtube.com/watch?v=ZULKod0bI0A&list=PLplW4d4HPsEJL29589GDjtHPAi-R01tnJ
+
+
+TypeScript Full Course - From Beginner to Advanced
+Tech With Tim
+https://www.youtube.com/watch?v=iJkaAJUzeWQ
+
+00:00:00 | Introduction
+00:01:01 | 1.1 - Dynamic vs Static Typing
+00:13:47 | 1.2 - Introduction to TypeScript
+00:18:15 | 1.3 - TypeScript Setup
+00:34:42 | 1.4 - tsconfig
+00:41:51 | 2.1 - Primitive Types
+00:50:23 | 2.2 - Arrays & Tuples
+00:58:48 | 2.3 - Enums & Literals
+01:08:44 | 2.4 - Any, Unknown & Type Casts
+01:17:55 | 2.5 - Optional Chaining and Bang
+01:24:45 | 3.1 - Basic Function Types
+01:40:22 | 3.2 - Advanced Function Types
+01:48:05 | 3.3 - Interfaces
+01:55:57 | 4.1 - Classes & Abstract Classes
+02:10:30 | 4.2 - Classes & Interfaces
+02:21:15 | 4.3 - Static Attributes & Methods
+02:25:37 | 4.4 - Generics
+02:32:26 | 5.1 - Type Aliases
+02:36:48 | 5.2 - Union & Intersection
+02:42:09 | 5.3 - Type Guards
+02:49:13 | 5.4 - Discriminated Unions
+02:53:42 | 5.5 - Utility Types
+02:59:06 | 6.1 - Modules (Import/Export)
+03:14:29 | 6.2 - Namespaces
+03:19:46 | 7.1 - Project Walkthrough
+03:33:25 | 7.2 - Project Solution
