@@ -6,5 +6,5 @@
 // js is dynamically type
 // let x =100;
 // x='a'  (yes)- Allowed
-var x = 123456789;
+var x = 111111;
 console.log(x);
