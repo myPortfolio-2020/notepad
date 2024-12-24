@@ -7,4 +7,5 @@
 // let x =100;
 // x='a'  (yes)- Allowed
 var x = 111111;
+var y = 12345678946876n;
 console.log(x);

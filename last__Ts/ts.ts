@@ -9,4 +9,5 @@
 // x='a'  (yes)- Allowed
 
 let x: number = 111_111;
+let y: bigint = 12345678946876n;
 console.log(x);
