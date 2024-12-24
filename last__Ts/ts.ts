@@ -8,4 +8,5 @@
 // let x =100;
 // x='a'  (yes)- Allowed
 
-
+let x: number = 123_456_789;
+console.log(x);
