@@ -50,3 +50,5 @@ let newObj: object = {
 newObj = { ...newObj, isPassed: true };
 console.log(newObj);
 //c
+let aa = "aa";
+aa = "bb";

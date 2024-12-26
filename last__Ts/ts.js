@@ -51,3 +51,5 @@ var newObj = {
 newObj = __assign(__assign({}, newObj), { isPassed: true });
 console.log(newObj);
 //c
+var aa = "aa";
+aa = "bb";
