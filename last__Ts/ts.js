@@ -19,7 +19,7 @@ var __assign = (this && this.__assign) || function () {
 // x='a'  (yes)- Allowed
 var x = 111111;
 // let y: bigint = 12345678946876n;
-console.log(x);
+// console.log(x);
 var arr = [1, 2, 3, 4];
 var arrString = ["a", "b", "c"];
 var arryMixed = ["a", "b", "c", 1, 2, 3, 4];
@@ -38,18 +38,22 @@ var obj1 = {
     // isPay: true,
 };
 var obj2 = __assign({}, obj); // use of spread operator
-console.log("obj2", obj2);
+// console.log("obj2", obj2);
 // obj2 { nm: 'raheel', age: 65, isPay: true }
 //if
 var obj3 = { obj: obj }; // see if no spread operator
-console.log("obj3", obj3);
+// console.log("obj3", obj3);
 //obj3 { obj: { nm: 'raheel', age: 65, isPay: true } }
 var newObj = {
     nm: "Jamal",
     age: 100,
 };
 newObj = __assign(__assign({}, newObj), { isPassed: true });
-console.log(newObj);
+// console.log(newObj);
 //c
-var aa = "aa";
-aa = "bb";
+var objAdd = {
+    nm: "raheel",
+    age: 14,
+};
+objAdd = __assign({ age: 101 }, objAdd);
+console.log("objAdd", objAdd);

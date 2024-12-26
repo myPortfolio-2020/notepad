@@ -10,7 +10,7 @@
 
 let x: number = 111_111;
 // let y: bigint = 12345678946876n;
-console.log(x);
+// console.log(x);
 
 let arr: number[] = [1, 2, 3, 4];
 let arrString: string[] = ["a", "b", "c"];
@@ -34,12 +34,12 @@ let obj1: { nm: string; age: number } = {
 };
 
 let obj2 = { ...obj }; // use of spread operator
-console.log("obj2", obj2);
+// console.log("obj2", obj2);
 // obj2 { nm: 'raheel', age: 65, isPay: true }
 
 //if
 let obj3 = { obj }; // see if no spread operator
-console.log("obj3", obj3);
+// console.log("obj3", obj3);
 //obj3 { obj: { nm: 'raheel', age: 65, isPay: true } }
 
 let newObj: object = {
@@ -48,7 +48,14 @@ let newObj: object = {
 };
 
 newObj = { ...newObj, isPassed: true };
-console.log(newObj);
+// console.log(newObj);
 //c
-let aa = "aa";
-aa = "bb";
+
+let objAdd: object = {
+  nm: "raheel",
+  age: 14,
+};
+
+objAdd = { age: 101, ...objAdd };
+
+console.log("objAdd", objAdd);
