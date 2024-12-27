@@ -74,3 +74,16 @@ var Color;
     Color[Color["Blue"] = 3] = "Blue";
 })(Color || (Color = {}));
 console.log(Color.Blue);
+// unknown
+var notSure = "33";
+if (typeof notSure == "number") {
+    notSure.toFixed(2);
+    console.log(notSure, ",is not a number");
+}
+// type inference
+var whichType = "shaista"; // whichType : string
+//type Assertion
+var isLength = 7888;
+console.log(isLength, isLength.toFixed(2));
+var isLength01 = "7888";
+console.log(isLength01, isLength01.length);

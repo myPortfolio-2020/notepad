@@ -83,3 +83,21 @@ enum Color {
   Blue,
 }
 console.log(Color.Blue);
+
+// unknown
+
+let notSure: unknown = "33";
+if (typeof notSure == "number") {
+  notSure.toFixed(2);
+  console.log(notSure, ",is not a number");
+}
+
+// type inference
+let whichType = "shaista"; // whichType : string
+
+//type Assertion
+let isLength: any = 7888;
+console.log(isLength, (isLength as number).toFixed(2));
+
+let isLength01: any = "7888";
+console.log(isLength01, (isLength01 as string).length);
