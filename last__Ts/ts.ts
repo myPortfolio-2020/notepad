@@ -101,3 +101,15 @@ console.log(isLength, (isLength as number).toFixed(2));
 
 let isLength01: any = "7888";
 console.log(isLength01, (isLength01 as string).length);
+
+//interface - function type
+
+interface MathOp {
+  (a: number, b: number): number;
+}
+let add: MathOp = (a, b) => a + b;
+console.log(add(2, 4));
+
+let sub: MathOp = (a, b) => a - b;
+let multi: MathOp = (a, b) => a * b;
+let divide: MathOp = (a, b) => a / b;

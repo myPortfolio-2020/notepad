@@ -87,3 +87,8 @@ var isLength = 7888;
 console.log(isLength, isLength.toFixed(2));
 var isLength01 = "7888";
 console.log(isLength01, isLength01.length);
+var add = function (a, b) { return a + b; };
+console.log(add(2, 4));
+var sub = function (a, b) { return a - b; };
+var multi = function (a, b) { return a * b; };
+var divide = function (a, b) { return a / b; };
