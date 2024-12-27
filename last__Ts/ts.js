@@ -57,3 +57,20 @@ var objAdd = {
 };
 objAdd = __assign({ age: 101 }, objAdd);
 console.log("objAdd", objAdd);
+var arr5 = [1, 2, 3, "sadasd"];
+var tuple1 = [11, "geyra"];
+var z1 = function (val) {
+    console.log(val);
+};
+var tuple_issue = [11, "eleven"];
+console.log(tuple_issue);
+tuple_issue.push(4); // drawback of tuple
+console.log(tuple_issue);
+//enum
+var Color;
+(function (Color) {
+    Color[Color["Red"] = 1] = "Red";
+    Color[Color["Green"] = 2] = "Green";
+    Color[Color["Blue"] = 3] = "Blue";
+})(Color || (Color = {}));
+console.log(Color.Blue);

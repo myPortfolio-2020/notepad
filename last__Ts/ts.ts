@@ -59,3 +59,27 @@ let objAdd: object = {
 objAdd = { age: 101, ...objAdd };
 
 console.log("objAdd", objAdd);
+
+let arr5: (number | string)[] = [1, 2, 3, "sadasd"];
+
+let tuple1: [number, string] = [11, "geyra"];
+
+const z1 = (val: any) => {
+  console.log(val);
+};
+
+let tuple_issue: [number, string] = [11, "eleven"];
+console.log(tuple_issue);
+
+tuple_issue.push(4); // drawback of tuple
+
+console.log(tuple_issue);
+
+//enum
+
+enum Color {
+  Red = 1,
+  Green,
+  Blue,
+}
+console.log(Color.Blue);
