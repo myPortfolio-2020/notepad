@@ -113,3 +113,15 @@ console.log(add(2, 4));
 let sub: MathOp = (a, b) => a - b;
 let multi: MathOp = (a, b) => a * b;
 let divide: MathOp = (a, b) => a / b;
+
+interface MathOpTwo {
+  a: number,
+  b: number
+}
+
+let addMe = ({a,b}:MathOpTwo):number=>{
+  return a + b
+}
+
+let myNumbers: MathOpTwo = {a:5, b:6}
+addMe(myNumbers)

@@ -92,3 +92,9 @@ console.log(add(2, 4));
 var sub = function (a, b) { return a - b; };
 var multi = function (a, b) { return a * b; };
 var divide = function (a, b) { return a / b; };
+var addMe = function (_a) {
+    var a = _a.a, b = _a.b;
+    return a + b;
+};
+var myNumbers = { a: 5, b: 6 };
+addMe(myNumbers);
