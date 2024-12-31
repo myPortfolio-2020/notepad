@@ -145,7 +145,6 @@ console.log(uni_onOne(7879));
 
 
 // type
-
 type Person = {
   name:string,
   age:number
