@@ -98,3 +98,19 @@ var addMe = function (_a) {
 };
 var myNumbers = { a: 5, b: 6 };
 addMe(myNumbers);
+// union
+var uni_on;
+uni_on = 78878;
+console.log(uni_on.toFixed(2));
+// type narrowing - trying avoid type assertion like varible define as (varible as string)
+var uni_onOne = function (id) {
+    if (typeof id == "string") {
+        console.log("is char", id.length);
+    }
+    else {
+        console.log(id.toFixed(2));
+    }
+    return id;
+};
+console.log("on run string", uni_onOne("rababJamshed"));
+console.log(uni_onOne(7879));

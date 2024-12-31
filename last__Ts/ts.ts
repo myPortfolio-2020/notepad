@@ -115,13 +115,39 @@ let multi: MathOp = (a, b) => a * b;
 let divide: MathOp = (a, b) => a / b;
 
 interface MathOpTwo {
-  a: number,
-  b: number
+  a: number;
+  b: number;
 }
 
-let addMe = ({a,b}:MathOpTwo):number=>{
-  return a + b
+let addMe = ({ a, b }: MathOpTwo): number => {
+  return a + b;
+};
+
+let myNumbers: MathOpTwo = { a: 5, b: 6 };
+addMe(myNumbers);
+
+// union
+let uni_on: string | number;
+uni_on = 78878;
+console.log(uni_on.toFixed(2));
+
+// type narrowing - trying avoid type assertion like varible define as (varible as string)
+const uni_onOne = (id: string | number) => {
+  if (typeof id == "string") {
+    console.log("is char", id.length);
+  } else {
+    console.log(id.toFixed(2));
+  }
+  return id 
+};
+console.log("on run string", uni_onOne("rababJamshed"));
+console.log(uni_onOne(7879));
+
+
+// type
+
+type Person = {
+  name:string,
+  age:number
 }
 
-let myNumbers: MathOpTwo = {a:5, b:6}
-addMe(myNumbers)
