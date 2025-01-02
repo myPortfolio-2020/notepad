@@ -138,15 +138,44 @@ const uni_onOne = (id: string | number) => {
   } else {
     console.log(id.toFixed(2));
   }
-  return id 
+  return id;
 };
 console.log("on run string", uni_onOne("rababJamshed"));
 console.log(uni_onOne(7879));
 
-
 // type
 type Person = {
-  name:string,
-  age:number
+  name: string;
+  age: number;
+};
+
+// function overloading
+function getLength(value: string): number;
+function getLength(value: any[]): number;
+function getLength(value: any): number {
+  return value.length;
+}
+console.log(getLength("788"));
+console.log(getLength([1, 2, 3, 4]));
+
+function greetingOne(greeting: string, ...greeNm: string[]): void {
+  console.log(greeting, greeNm);
 }
 
+greetingOne("Rabab", "murtazza", "asdasd");
+
+function noIdea(...anyNm: number[]) {
+  console.log(anyNm);
+}
+
+console.log(noIdea(1, 2, 3, 4));
+
+// Practice question set 01
+// factorial 4*3*2*1
+
+const factorialFn = (num: number): number => {
+  if (num <= 1) return 1;
+  return num * factorialFn(num -1);
+};
+
+console.log(factorialFn(5));

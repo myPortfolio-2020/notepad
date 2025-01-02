@@ -114,3 +114,32 @@ var uni_onOne = function (id) {
 };
 console.log("on run string", uni_onOne("rababJamshed"));
 console.log(uni_onOne(7879));
+function getLength(value) {
+    return value.length;
+}
+console.log(getLength("788"));
+console.log(getLength([1, 2, 3, 4]));
+function greetingOne(greeting) {
+    var greeNm = [];
+    for (var _i = 1; _i < arguments.length; _i++) {
+        greeNm[_i - 1] = arguments[_i];
+    }
+    console.log(greeting, greeNm);
+}
+greetingOne("Rabab", "murtazza", "asdasd");
+function noIdea() {
+    var anyNm = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        anyNm[_i] = arguments[_i];
+    }
+    console.log(anyNm);
+}
+console.log(noIdea(1, 2, 3, 4));
+// Practice question set 01
+// factorial 4*3*2*1
+var factorialFn = function (num) {
+    if (num <= 1)
+        return 1;
+    return num * factorialFn(num - 1);
+};
+console.log(factorialFn(5));
