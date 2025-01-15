@@ -1,3 +1,5 @@
+/// https://www.youtube.com/watch?v=rbK-E9xAZdE&list=PLplW4d4HPsEJL29589GDjtHPAi-R01tnJ&index=83
+
 // // Diifernce between ts and js
 // //_____________________________________________________________
 // // ts is statically type
@@ -275,67 +277,88 @@ console.log(genObjOne);
 
 let genObjTwo: GenInt<boolean, string> = {
   name: true,
-  age: '33',
+  age: "33",
 };
 console.log(genObjTwo);
 
 /// generic with constraints
-const getLengthFun =<T extends {length:number}> (item:T):number=>{
-  return item.length
-}
+const getLengthFun = <T extends { length: number }>(item: T): number => {
+  return item.length;
+};
 
-console.log(getLengthFun('funniest'))
+console.log(getLengthFun("funniest"));
 
 /// see the difference
-const getLengthFunOne =<T> (item:T):T=>{
-  return item
-}
+const getLengthFunOne = <T>(item: T): T => {
+  return item;
+};
 
-console.log(getLengthFunOne('funniest').length)
+console.log(getLengthFunOne("funniest").length);
 
 //literal Type
-type LiteralType = 'deliver' | 'pending'
+type LiteralType = "deliver" | "pending";
 
-let lit:LiteralType = 'deliver'
-
+let lit: LiteralType = "deliver";
 
 enum eee {
- delivery,
- pending,
- cancelled
+  delivery,
+  pending,
+  cancelled,
 }
 
-let enumVal = eee.cancelled
+let enumVal = eee.cancelled;
 
 /// typeGaurds
-// runtime check 
+// runtime check
 
 // Define two classes
 class Dog {
-  bark(){
-    console.log('Woof woof!')
+  bark() {
+    console.log("Woof woof!");
   }
 }
 
 class Cat {
-  mewo(){
-    console.log('meooown!')
+  mewo() {
+    console.log("meooown!");
   }
 }
 
-const petSound = (sound: Dog | Cat)=>{
-  if (sound instanceof Dog){
-    sound.bark()
-  }else if (sound instanceof Cat){
-    sound.mewo()
+const petSound = (sound: Dog | Cat) => {
+  if (sound instanceof Dog) {
+    sound.bark();
+  } else if (sound instanceof Cat) {
+    sound.mewo();
   } else {
     console.log("Unknown animal");
   }
+};
+
+const dogSound = new Dog();
+const CatSound = new Cat();
+
+petSound(dogSound);
+petSound(CatSound);
+
+///is
+interface Fish {
+  swim(): void;
 }
 
-const dogSound = new Dog()
-const CatSound = new Cat()
+interface Bird {
+  fly(): void;
+}
+
+const isFish = (pet: Fish | Bird): pet is Fish => {
+  return (pet as Fish).swim !== undefined;
+};
 
 
-petSound(dogSound)
-petSound(CatSound)
+//keyOf
+interface keyOfUse {
+  name:string,
+  age: number
+}
+
+
+
