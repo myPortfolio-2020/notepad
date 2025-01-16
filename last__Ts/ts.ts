@@ -354,11 +354,19 @@ const isFish = (pet: Fish | Bird): pet is Fish => {
 };
 
 
-//keyOf
-interface keyOfUse {
-  name:string,
-  age: number
+//keyof
+
+interface IElleven {
+  nm: string,
+  age: number,
+  isEmp: boolean,
+  isCar:boolean
 }
 
+type EmpType = keyof IElleven
+
+let anyAge: EmpType = 'age'
+let anyNm : EmpType = 'nm'
+let isCar :EmpType = 'isCar'
 
 
