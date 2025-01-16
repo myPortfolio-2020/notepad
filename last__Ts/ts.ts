@@ -353,20 +353,41 @@ const isFish = (pet: Fish | Bird): pet is Fish => {
   return (pet as Fish).swim !== undefined;
 };
 
-
 //keyof
 
 interface IElleven {
-  nm: string,
-  age: number,
-  isEmp: boolean,
-  isCar:boolean
+  nm: string;
+  age: number;
+  isEmp: boolean;
+  isCar: boolean;
 }
 
-type EmpType = keyof IElleven
+type EmpType = keyof IElleven;
 
-let anyAge: EmpType = 'age'
-let anyNm : EmpType = 'nm'
-let isCar :EmpType = 'isCar'
+let anyAge: EmpType = "age";
+let anyNm: EmpType = "nm";
+let isCar: EmpType = "isCar";
 
+//Keyof
+interface Trip {
+  traveller: number;
+  duration: string;
+}
 
+type TripType = keyof Trip;
+
+let treveller: TripType = "duration";
+
+const person = {
+  name: "ratan Lal",
+  age: 60,
+};
+
+type Person = typeof person;
+type Key = keyof typeof person;
+
+const getObjPro = (obj: Person, name: Key) => {
+  return obj[name];
+};
+
+console.log(getObjPro(person, "name"));

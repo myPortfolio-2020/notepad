@@ -1,3 +1,4 @@
+/// https://www.youtube.com/watch?v=rbK-E9xAZdE&list=PLplW4d4HPsEJL29589GDjtHPAi-R01tnJ&index=83
 // // Diifernce between ts and js
 // //_____________________________________________________________
 // // ts is statically type
@@ -199,20 +200,20 @@ var genObjOne = {
 console.log(genObjOne);
 var genObjTwo = {
     name: true,
-    age: '33',
+    age: "33",
 };
 console.log(genObjTwo);
 /// generic with constraints
 var getLengthFun = function (item) {
     return item.length;
 };
-console.log(getLengthFun('funniest'));
+console.log(getLengthFun("funniest"));
 /// see the difference
 var getLengthFunOne = function (item) {
     return item;
 };
-console.log(getLengthFunOne('funniest').length);
-var lit = 'deliver';
+console.log(getLengthFunOne("funniest").length);
+var lit = "deliver";
 var eee;
 (function (eee) {
     eee[eee["delivery"] = 0] = "delivery";
@@ -221,13 +222,13 @@ var eee;
 })(eee || (eee = {}));
 var enumVal = eee.cancelled;
 /// typeGaurds
-// runtime check 
+// runtime check
 // Define two classes
 var Dog = /** @class */ (function () {
     function Dog() {
     }
     Dog.prototype.bark = function () {
-        console.log('Woof woof!');
+        console.log("Woof woof!");
     };
     return Dog;
 }());
@@ -235,7 +236,7 @@ var Cat = /** @class */ (function () {
     function Cat() {
     }
     Cat.prototype.mewo = function () {
-        console.log('meooown!');
+        console.log("meooown!");
     };
     return Cat;
 }());
@@ -254,3 +255,18 @@ var dogSound = new Dog();
 var CatSound = new Cat();
 petSound(dogSound);
 petSound(CatSound);
+var isFish = function (pet) {
+    return pet.swim !== undefined;
+};
+var anyAge = "age";
+var anyNm = "nm";
+var isCar = "isCar";
+var treveller = "duration";
+var person = {
+    name: "ratan Lal",
+    age: 60,
+};
+var getObjPro = function (obj, name) {
+    return obj[name];
+};
+console.log(getObjPro(person, "name"));
