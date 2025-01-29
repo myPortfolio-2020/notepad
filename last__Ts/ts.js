@@ -270,3 +270,7 @@ var getObjPro = function (obj, name) {
     return obj[name];
 };
 console.log(getObjPro(person, "name"));
+var travelling = function (travel) {
+    return "".concat(travel.name, " is going to ").concat(travel.country, " this year ").concat(travel.year, " ");
+};
+console.log(travelling({ name: "Kir", country: 'Pakistan', year: 2025 }));

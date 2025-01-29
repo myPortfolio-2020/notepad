@@ -391,3 +391,15 @@ const getObjPro = (obj: Person, name: Key) => {
 };
 
 console.log(getObjPro(person, "name"));
+
+interface Travel {
+  year: number;
+  name: string;
+  country: string;
+}
+
+const travelling = (travel: Travel) => {
+  return `${travel.name} is going to ${travel.country} this year ${travel.year} `;
+};
+
+console.log(travelling({ name: "Kir", country:'Pakistan', year:2025 }));
