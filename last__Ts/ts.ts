@@ -1,5 +1,7 @@
 /// https://www.youtube.com/watch?v=rbK-E9xAZdE&list=PLplW4d4HPsEJL29589GDjtHPAi-R01tnJ&index=83
 
+import { addTwoNum } from "./utils";
+
 // // Diifernce between ts and js
 // //_____________________________________________________________
 // // ts is statically type
@@ -403,3 +405,5 @@ const travelling = (travel: Travel) => {
 };
 
 console.log(travelling({ name: "Kir", country:'Pakistan', year:2025 }));
+
+console.log('add two num',addTwoNum(4,4))

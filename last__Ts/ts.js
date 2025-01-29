@@ -1,4 +1,7 @@
+"use strict";
 /// https://www.youtube.com/watch?v=rbK-E9xAZdE&list=PLplW4d4HPsEJL29589GDjtHPAi-R01tnJ&index=83
+Object.defineProperty(exports, "__esModule", { value: true });
+var utils_1 = require("./utils");
 // // Diifernce between ts and js
 // //_____________________________________________________________
 // // ts is statically type
@@ -274,3 +277,4 @@ var travelling = function (travel) {
     return "".concat(travel.name, " is going to ").concat(travel.country, " this year ").concat(travel.year, " ");
 };
 console.log(travelling({ name: "Kir", country: 'Pakistan', year: 2025 }));
+console.log('add two num', (0, utils_1.addTwoNum)(4, 4));
