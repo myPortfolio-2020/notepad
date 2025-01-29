@@ -1,5 +1,16 @@
 "use strict";
 /// https://www.youtube.com/watch?v=rbK-E9xAZdE&list=PLplW4d4HPsEJL29589GDjtHPAi-R01tnJ&index=83
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 var utils_1 = require("./utils");
 // // Diifernce between ts and js
@@ -276,5 +287,29 @@ console.log(getObjPro(person, "name"));
 var travelling = function (travel) {
     return "".concat(travel.name, " is going to ").concat(travel.country, " this year ").concat(travel.year, " ");
 };
-console.log(travelling({ name: "Kir", country: 'Pakistan', year: 2025 }));
-console.log('add two num', (0, utils_1.addTwoNum)(4, 4));
+console.log(travelling({ name: "Kir", country: "Pakistan", year: 2025 }));
+console.log("add two num", (0, utils_1.addTwoNum)(4, 4));
+var ifScore = 1312312123;
+console.log(ifScore);
+var thinArr = ["hjhk", "hkj", 455];
+console.log(thinArr[2]);
+var thisIsUndefine = undefined;
+var thisIsNull = null;
+var isObject = {
+    nm: "tina",
+    age: 11,
+};
+console.log(isObject);
+var ifCopy = {
+    nm: "bk",
+    age: 55,
+    sal: 70000000000000,
+};
+var thisIsTheCopy = __assign({}, ifCopy);
+console.log(thisIsTheCopy);
+var letSay = {
+    nm: "karim",
+    sal: 4444444,
+};
+var letSay01 = __assign(__assign({}, letSay), { phone: 4565478 });
+console.log(letSay);

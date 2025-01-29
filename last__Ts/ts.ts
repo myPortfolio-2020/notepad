@@ -404,6 +404,39 @@ const travelling = (travel: Travel) => {
   return `${travel.name} is going to ${travel.country} this year ${travel.year} `;
 };
 
-console.log(travelling({ name: "Kir", country:'Pakistan', year:2025 }));
+console.log(travelling({ name: "Kir", country: "Pakistan", year: 2025 }));
 
-console.log('add two num',addTwoNum(4,4))
+console.log("add two num", addTwoNum(4, 4));
+
+let ifScore = 131_2312_123;
+console.log(ifScore);
+
+let thinArr: (string | number)[] = ["hjhk", "hkj", 455];
+console.log(thinArr[2]);
+
+let thisIsUndefine: undefined = undefined;
+let thisIsNull: null = null;
+
+let isObject: { nm: string; age: number } = {
+  nm: "tina",
+  age: 11,
+};
+console.log(isObject);
+
+let ifCopy = {
+  nm: "bk",
+  age: 55,
+  sal: 70000000000000,
+};
+
+let thisIsTheCopy = { ...ifCopy };
+console.log(thisIsTheCopy);
+
+let letSay:{nm:string, sal:number} = {
+  nm: "karim",
+  sal: 4444444,
+};
+
+let letSay01 = { ...letSay, phone: 4565478 };
+
+console.log(letSay);
