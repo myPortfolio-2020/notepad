@@ -9,3 +9,7 @@ usernameimman747462jrHWrababpassword
 WebDarpan
 https://www.youtube.com/watch?v=0M5uTM0ZSRw
 https://www.youtube.com/@WebDarpan/playlists
+
+Meta Llama
+Model
+Meta Llama can be used for tasks like writing, translating languages, and answering questions. 
