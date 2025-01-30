@@ -438,5 +438,5 @@ let letSay:{nm:string, sal:number} = {
 };
 
 let letSay01 = { ...letSay, phone: 4565478 };
-
 console.log(letSay);
+
