@@ -9,3 +9,8 @@ https://www.youtube.com/watch?v=FcxjCPeicvU&t=82s
 
 All Functional LMS mobile App with React Native,Expo,Typescript,Express js
 https://www.youtube.com/watch?v=hGB-6VAcM6U
+
+
+
+MERN Stack Project: Building Job Portal with React, Node, MongoDB, Express, Redux and Redux-Toolkit
+https://www.youtube.com/watch?v=3omr6Zqzwt0
